@@ -1,9 +1,12 @@
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import cross_val_score
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 def importer_donnees(dossier_tables="tables", info=False):
     '''
@@ -769,8 +772,6 @@ PAIRES_DERIVEES = {
     "nb_pipes_sem": ("nb_pipes_jour", 7),
     "regime_duree_mois": ("regime_duree_sem", 12 / 52),
 }
-
-
 
 #####################################################
 #  Main
